@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include acam *.css
+recursive-include acam *.csv
+recursive-include acam *.html
+recursive-include acam *.ico
+recursive-include acam *.js
+recursive-include acam *.json
+recursive-include acam *.md
+recursive-include acam *.png
+recursive-include acam *.py
+recursive-include acam *.svg
+recursive-include acam *.txt
+recursive-exclude acam *.pyc
