@@ -1,0 +1,202 @@
+{
+ "actions": [],
+ "autoname": "format:{factor_name} - {factor_description}",
+ "creation": "2020-08-19 11:42:32.668976",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "factor_name",
+  "factor_description",
+  "check_factors",
+  "column_break_3",
+  "sequence",
+  "company",
+  "factors_section",
+  "distribution_and_related_activities_column",
+  "distribution_services",
+  "distribution_connection_services",
+  "regulated_retail_services",
+  "non_regulated_retail_services",
+  "supplier_of_last_resort",
+  "wholesale_aggregator",
+  "related_business",
+  "generationcb",
+  "generation",
+  "supply_services",
+  "generalcb",
+  "general_purpose"
+ ],
+ "fields": [
+  {
+   "columns": 1,
+   "fieldname": "factor_name",
+   "fieldtype": "Data",
+   "label": "Factor Name",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "factor_description",
+   "fieldtype": "Data",
+   "in_global_search": 1,
+   "in_standard_filter": 1,
+   "label": "Factor Description",
+   "reqd": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Company",
+   "options": "Company",
+   "reqd": 1
+  },
+  {
+   "fieldname": "factors_section",
+   "fieldtype": "Section Break",
+   "label": "Factors"
+  },
+  {
+   "fieldname": "distribution_and_related_activities_column",
+   "fieldtype": "Column Break",
+   "label": "Distribution and Related Activities"
+  },
+  {
+   "default": "0",
+   "fieldname": "distribution_services",
+   "fieldtype": "Float",
+   "label": "Distribution Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "distribution_connection_services",
+   "fieldtype": "Float",
+   "label": "Distribution Connection Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "regulated_retail_services",
+   "fieldtype": "Float",
+   "label": "Regulated Retail Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "non_regulated_retail_services",
+   "fieldtype": "Float",
+   "label": "Non Regulated Retail Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "supplier_of_last_resort",
+   "fieldtype": "Float",
+   "label": "Supplier of Last Resort"
+  },
+  {
+   "default": "0",
+   "fieldname": "wholesale_aggregator",
+   "fieldtype": "Float",
+   "label": "Wholesale Aggregator"
+  },
+  {
+   "default": "0",
+   "fieldname": "related_business",
+   "fieldtype": "Float",
+   "label": "Related Business"
+  },
+  {
+   "fieldname": "generationcb",
+   "fieldtype": "Column Break",
+   "label": "Generation"
+  },
+  {
+   "default": "0",
+   "fieldname": "generation",
+   "fieldtype": "Float",
+   "label": " Generation"
+  },
+  {
+   "default": "0",
+   "fieldname": "supply_services",
+   "fieldtype": "Float",
+   "label": "Supply Services "
+  },
+  {
+   "fieldname": "generalcb",
+   "fieldtype": "Column Break",
+   "label": "General Purpose"
+  },
+  {
+   "default": "0",
+   "fieldname": "general_purpose",
+   "fieldtype": "Float",
+   "label": "General Purpose"
+  },
+  {
+   "fieldname": "check_factors",
+   "fieldtype": "Float",
+   "in_list_view": 1,
+   "label": "Check Factors",
+   "read_only": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_in_quick_entry": 1,
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sequence"
+  }
+ ],
+ "links": [],
+ "modified": "2020-09-07 17:23:28.739922",
+ "modified_by": "Administrator",
+ "module": "Acam",
+ "name": "Acam Factor",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "sequence",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "factor_name",
+ "track_changes": 1
+}

@@ -135,3 +135,8 @@ app_license = "MIT"
 #
 # auto_cancel_exempted_doctypes = ["Auto Repeat"]
 
+fixtures = [
+    {"dt": "Desk Page", "filters": [
+        [ "name", "in", ["Acam"] ]
+    ]}
+]

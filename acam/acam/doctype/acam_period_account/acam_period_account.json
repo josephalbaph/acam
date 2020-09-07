@@ -1,0 +1,152 @@
+{
+ "actions": [],
+ "creation": "2020-09-06 21:07:13.587976",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "account",
+  "column_break_2",
+  "amount",
+  "segment_section",
+  "acam_factor",
+  "section_break_6",
+  "distribution_and_related_activities_column",
+  "distribution_services",
+  "distribution_connection_services",
+  "regulated_retail_services",
+  "non_regulated_retail_services",
+  "supplier_of_last_resort",
+  "wholesale_aggregator",
+  "related_business",
+  "generationcb",
+  "generation",
+  "supply_services",
+  "generalcb",
+  "general_purpose"
+ ],
+ "fields": [
+  {
+   "fieldname": "account",
+   "fieldtype": "Link",
+   "in_filter": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Account",
+   "options": "Account",
+   "reqd": 1
+  },
+  {
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "segment_section",
+   "fieldtype": "Section Break",
+   "label": "Cost Allocation"
+  },
+  {
+   "fieldname": "distribution_and_related_activities_column",
+   "fieldtype": "Column Break",
+   "label": "Distribution and Related Activities"
+  },
+  {
+   "default": "0",
+   "fieldname": "distribution_services",
+   "fieldtype": "Currency",
+   "label": "Distribution Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "distribution_connection_services",
+   "fieldtype": "Currency",
+   "label": "Distribution Connection Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "regulated_retail_services",
+   "fieldtype": "Currency",
+   "label": "Regulated Retail Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "non_regulated_retail_services",
+   "fieldtype": "Currency",
+   "label": "Non Regulated Retail Services"
+  },
+  {
+   "default": "0",
+   "fieldname": "supplier_of_last_resort",
+   "fieldtype": "Currency",
+   "label": "Supplier of Last Resort"
+  },
+  {
+   "default": "0",
+   "fieldname": "wholesale_aggregator",
+   "fieldtype": "Currency",
+   "label": "Wholesale Aggregator"
+  },
+  {
+   "default": "0",
+   "fieldname": "related_business",
+   "fieldtype": "Currency",
+   "label": "Related Business"
+  },
+  {
+   "fieldname": "generationcb",
+   "fieldtype": "Column Break",
+   "label": "Generation"
+  },
+  {
+   "default": "0",
+   "fieldname": "generation",
+   "fieldtype": "Currency",
+   "label": " Generation"
+  },
+  {
+   "default": "0",
+   "fieldname": "supply_services",
+   "fieldtype": "Currency",
+   "label": "Supply Services "
+  },
+  {
+   "fieldname": "generalcb",
+   "fieldtype": "Column Break",
+   "label": "General Purpose"
+  },
+  {
+   "default": "0",
+   "fieldname": "general_purpose",
+   "fieldtype": "Currency",
+   "label": "General Purpose"
+  },
+  {
+   "fieldname": "acam_factor",
+   "fieldtype": "Link",
+   "label": "Acam Factor",
+   "options": "Acam Factor"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2020-09-07 01:13:48.333713",
+ "modified_by": "Administrator",
+ "module": "Acam",
+ "name": "Acam Period Account",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

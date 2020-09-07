@@ -1,0 +1,45 @@
+[
+ {
+  "cards": [],
+  "cards_label": null,
+  "category": "Modules",
+  "charts": [],
+  "charts_label": null,
+  "developer_mode_only": 0,
+  "disable_user_customization": 0,
+  "docstatus": 0,
+  "doctype": "Desk Page",
+  "extends": null,
+  "extends_another_page": 0,
+  "for_user": null,
+  "hide_custom": 0,
+  "is_standard": 0,
+  "label": "Acam",
+  "modified": "2020-08-19 11:53:13.632936",
+  "module": "Acam",
+  "name": "Acam",
+  "onboarding": null,
+  "parent": null,
+  "parentfield": null,
+  "parenttype": null,
+  "pin_to_bottom": 0,
+  "pin_to_top": 0,
+  "restrict_to_domain": null,
+  "shortcuts": [
+   {
+    "color": null,
+    "format": null,
+    "icon": null,
+    "label": "ACAM Factor",
+    "link_to": "Acam Factor",
+    "parent": "Acam",
+    "parentfield": "shortcuts",
+    "parenttype": "Desk Page",
+    "restrict_to_domain": null,
+    "stats_filter": null,
+    "type": "DocType"
+   }
+  ],
+  "shortcuts_label": "Accounts and Cost Allocation Model"
+ }
+]

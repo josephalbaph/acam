@@ -1,0 +1,97 @@
+{
+ "actions": [],
+ "autoname": "field:acam_month",
+ "creation": "2020-08-19 19:19:31.612014",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "start_date",
+  "end_date",
+  "column_break_3",
+  "acam_month",
+  "company",
+  "section_break_6",
+  "acam_period_factor",
+  "acam_account_section",
+  "acam_period_account"
+ ],
+ "fields": [
+  {
+   "fieldname": "acam_month",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Acam Month",
+   "read_only": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "start_date",
+   "fieldtype": "Date",
+   "label": "Start Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "end_date",
+   "fieldtype": "Date",
+   "label": "End Date"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break",
+   "label": "Acam Factor"
+  },
+  {
+   "fieldname": "acam_period_factor",
+   "fieldtype": "Table",
+   "label": "Acam Period Factor",
+   "options": "Acam Period Factor"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "acam_account_section",
+   "fieldtype": "Section Break",
+   "label": "Acam Account"
+  },
+  {
+   "fieldname": "acam_period_account",
+   "fieldtype": "Table",
+   "label": "Acam Period Account",
+   "options": "Acam Period Account"
+  }
+ ],
+ "links": [],
+ "modified": "2020-09-06 21:26:06.188692",
+ "modified_by": "Administrator",
+ "module": "Acam",
+ "name": "Acam Period",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}
