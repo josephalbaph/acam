@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "format:{factor_name} - {factor_description}",
  "creation": "2020-08-19 11:42:32.668976",
  "doctype": "DocType",
@@ -61,7 +62,7 @@
   {
    "fieldname": "distribution_and_related_activities_column",
    "fieldtype": "Column Break",
-   "label": "Distribution and Related Activities"
+   "label": "Distribution and Related Activities Factors"
   },
   {
    "default": "0",
@@ -108,7 +109,7 @@
   {
    "fieldname": "generationcb",
    "fieldtype": "Column Break",
-   "label": "Generation"
+   "label": "Generation Factors"
   },
   {
    "default": "0",
@@ -120,12 +121,12 @@
    "default": "0",
    "fieldname": "supply_services",
    "fieldtype": "Float",
-   "label": "Supply Services "
+   "label": "Supply Services"
   },
   {
    "fieldname": "generalcb",
    "fieldtype": "Column Break",
-   "label": "General Purpose"
+   "label": "General Purpose Factors"
   },
   {
    "default": "0",
@@ -153,7 +154,7 @@
   }
  ],
  "links": [],
- "modified": "2020-09-07 17:23:28.739922",
+ "modified": "2020-09-11 07:33:00.079421",
  "modified_by": "Administrator",
  "module": "Acam",
  "name": "Acam Factor",
@@ -164,6 +165,7 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
@@ -197,6 +199,5 @@
  "search_fields": "sequence",
  "sort_field": "modified",
  "sort_order": "DESC",
- "title_field": "factor_name",
  "track_changes": 1
 }

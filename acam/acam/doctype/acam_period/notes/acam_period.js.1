@@ -5,14 +5,43 @@ frappe.ui.form.on('Acam Period', {
     setup: function (frm) {
         acam_fields.forEach((field_name) => frappe.ui.form.on('Acam Period Factor', field_name, (frm, cdt, cdn) => compute_check_factors(frm, cdt, cdn)))
     }, 
-    refresh: function (frm) {
-        frm.toggle_enable('from_date', frm.is_new()); 
+	refresh: function (frm) {
+		frm.add_custom_button(__('Create Factors'), function () {
+			return frappe.call({
+				type: "GET",
+				method: "acam.acam.doctype.acam_period.acam_period.get_acam_factor",
+				args: {
+					"company": frm.doc.company
+				},
+				callback: function (r) {
+					frappe.model.clear_table(frm.doc, "acam_period_factor");
+					if (r.message) {
+						update_acam_period_factor(frm.doc, r.message);
+					}
+				}
+			});    
+        });
+		frm.add_custom_button(__('Create Accounts'), function () {
+			return frappe.call({
+				type: "GET",
+				method: "acam.acam.doctype.acam_period.acam_period.get_acam_account_factor",
+				args: {
+					"company": frm.doc.company
+				},
+				callback: function (r) {
+					frappe.model.clear_table(frm.doc, "acam_period_account");
+					if (r.message) {
+						update_acam_period_account(frm, r.message);
+					}
+				}
+			});    
+        });
     },
     from_date: function (frm) {
         frm.doc.from_date = moment(frm.doc.from_date).startOf("month").format()
-        frm.doc.to_date = moment(frm.doc.from_date).endOf("month").format()
-        frm.doc.title = moment(frm.doc.to_date).format("YYYY-MM MMMM DD, YYYY")
-        frm.refresh_field(['from_date', 'to_date', 'title'])
+        frm.doc.to_date = moment(frm.doc.to_date).endOf("month").format()
+        frm.doc.acam_month = moment(frm.doc.from_date).format("YYYY MM (MMMM)")
+        frm.refresh_field(['from_date', 'to_date', 'acam_month'])
     }
 });
 

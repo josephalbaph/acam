@@ -1,15 +1,23 @@
 {
- "actions": [],
- "autoname": "field:acam_month",
+ "actions": [
+  {
+   "action": "acam.acam.doctype.acam_period.acam_period.solve_period_account",
+   "action_type": "Server Action",
+   "group": "Accounts",
+   "label": "Solve Values"
+  }
+ ],
+ "autoname": "ACAM-.########",
  "creation": "2020-08-19 19:19:31.612014",
  "doctype": "DocType",
  "editable_grid": 1,
  "engine": "InnoDB",
  "field_order": [
-  "start_date",
-  "end_date",
+  "from_date",
+  "to_date",
+  "acam_spreadsheet",
   "column_break_3",
-  "acam_month",
+  "title",
   "company",
   "section_break_6",
   "acam_period_factor",
@@ -17,14 +25,6 @@
   "acam_period_account"
  ],
  "fields": [
-  {
-   "fieldname": "acam_month",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Acam Month",
-   "read_only": 1,
-   "unique": 1
-  },
   {
    "fieldname": "company",
    "fieldtype": "Link",
@@ -34,17 +34,6 @@
   {
    "fieldname": "column_break_3",
    "fieldtype": "Column Break"
-  },
-  {
-   "fieldname": "start_date",
-   "fieldtype": "Date",
-   "label": "Start Date",
-   "reqd": 1
-  },
-  {
-   "fieldname": "end_date",
-   "fieldtype": "Date",
-   "label": "End Date"
   },
   {
    "collapsible": 1,
@@ -69,10 +58,33 @@
    "fieldtype": "Table",
    "label": "Acam Period Account",
    "options": "Acam Period Account"
+  },
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "label": "To Date"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "unique": 1
+  },
+  {
+   "fieldname": "acam_spreadsheet",
+   "fieldtype": "Attach",
+   "label": "Acam Spreadsheet"
   }
  ],
  "links": [],
- "modified": "2020-09-06 21:26:06.188692",
+ "modified": "2020-09-28 19:19:37.581230",
  "modified_by": "Administrator",
  "module": "Acam",
  "name": "Acam Period",
@@ -93,5 +105,6 @@
  ],
  "sort_field": "modified",
  "sort_order": "DESC",
+ "title_field": "title",
  "track_changes": 1
 }

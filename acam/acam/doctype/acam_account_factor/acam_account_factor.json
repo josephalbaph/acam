@@ -1,5 +1,6 @@
 {
  "actions": [],
+ "allow_import": 1,
  "autoname": "field:account",
  "creation": "2020-09-06 17:20:52.457193",
  "doctype": "DocType",
@@ -7,7 +8,11 @@
  "engine": "InnoDB",
  "field_order": [
   "account",
-  "acam_factor"
+  "acam_factor",
+  "factor_name",
+  "factor_description",
+  "sequence",
+  "company"
  ],
  "fields": [
   {
@@ -17,6 +22,7 @@
    "in_preview": 1,
    "label": "Account",
    "options": "Account",
+   "reqd": 1,
    "unique": 1
   },
   {
@@ -28,10 +34,34 @@
    "in_standard_filter": 1,
    "label": "Acam Factor",
    "options": "Acam Factor"
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Sequence"
+  },
+  {
+   "fieldname": "company",
+   "fieldtype": "Link",
+   "label": "Company",
+   "options": "Company"
+  },
+  {
+   "fetch_from": "acam_factor.factor_name",
+   "fieldname": "factor_name",
+   "fieldtype": "Read Only",
+   "label": "Factor Name"
+  },
+  {
+   "fetch_from": "acam_factor.factor_description",
+   "fieldname": "factor_description",
+   "fieldtype": "Read Only",
+   "label": "Factor Description"
   }
  ],
  "links": [],
- "modified": "2020-09-06 20:32:28.614586",
+ "modified": "2020-09-16 14:15:10.468100",
  "modified_by": "Administrator",
  "module": "Acam",
  "name": "Acam Account Factor",
@@ -42,10 +72,12 @@
    "delete": 1,
    "email": 1,
    "export": 1,
+   "import": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "set_user_permissions": 1,
    "share": 1,
    "write": 1
   },

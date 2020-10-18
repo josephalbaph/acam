@@ -6,10 +6,17 @@
  "engine": "InnoDB",
  "field_order": [
   "account",
+  "sequence",
   "column_break_2",
   "amount",
+  "check_amount",
+  "get_amount",
   "segment_section",
   "acam_factor",
+  "section_break_9",
+  "factor_name",
+  "column_break_10",
+  "factor_description",
   "section_break_6",
   "distribution_and_related_activities_column",
   "distribution_services",
@@ -135,11 +142,49 @@
   {
    "fieldname": "section_break_6",
    "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "sequence",
+   "fieldtype": "Int",
+   "label": "Sequence"
+  },
+  {
+   "fieldname": "get_amount",
+   "fieldtype": "Button",
+   "label": "Get Amount"
+  },
+  {
+   "fieldname": "check_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Check Amount",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "acam_factor.factor_name",
+   "fieldname": "factor_name",
+   "fieldtype": "Read Only",
+   "in_list_view": 1,
+   "label": "Factor Name"
+  },
+  {
+   "fieldname": "column_break_10",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "acam_factor.factor_description",
+   "fieldname": "factor_description",
+   "fieldtype": "Read Only",
+   "label": "Factor Description"
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
   }
  ],
  "istable": 1,
  "links": [],
- "modified": "2020-09-07 01:13:48.333713",
+ "modified": "2020-09-16 14:24:41.102928",
  "modified_by": "Administrator",
  "module": "Acam",
  "name": "Acam Period Account",
